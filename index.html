@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全台互助會 | 快速借款平台</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;900&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Noto Sans TC',sans-serif;
+    background:linear-gradient(135deg,#fff7ed,#ffedd5);
+    color:#333;
+    overflow-x:hidden;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:600px;height:600px;
+    background:radial-gradient(circle,rgba(251,146,60,0.25),transparent 70%);
+    top:-100px;right:-100px;
+    z-index:0;
+}
+
+body::before{
+    content:"✔ 已成功撥款 ✔ 安全保密 ✔ 快速核准";
+    position:fixed;
+    top:60%;left:15%;
+    transform:rotate(-20deg);
+    font-size:38px;
+    color:rgba(0,0,0,0.04);
+}
+
+.marquee{
+    background:#111;
+    padding:12px 0;
+    overflow:hidden;
+    white-space:nowrap;
+}
+.marquee span{
+    display:inline-block;
+    font-size:20px;
+    font-weight:700;
+    padding-left:100%;
+    animation:marquee 12s linear infinite, glow 3s ease-in-out infinite;
+    background:linear-gradient(90deg,#ff7a18,#ffd200,#38bdf8,#ff7a18);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+@keyframes marquee{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-100%);}
+}
+@keyframes glow{
+    0%,100%{filter:brightness(1);}
+    50%{filter:brightness(1.6);}
+}
+
+nav{
+    position:relative;z-index:2;
+    max-width:850px;margin:auto;
+    padding:15px 20px;
+    display:flex;justify-content:space-between;
+}
+.logo{
+    font-size:24px;font-weight:900;
+    color:#ea580c;
+}
+.join-btn{
+    background:linear-gradient(90deg,#fb923c,#f97316);
+    color:#fff;padding:10px 18px;
+    border-radius:999px;text-decoration:none;
+    font-weight:bold;
+}
+
+.hero{
+    position:relative;z-index:2;
+    text-align:center;
+    padding:60px 20px 30px;
+    max-width:850px;margin:auto;
+}
+.hero h1{
+    font-size:40px;font-weight:900;
+    color:#c2410c;
+}
+.hero p{font-size:18px;opacity:.85;}
+
+.features{
+    position:relative;z-index:2;
+    max-width:850px;margin:30px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;padding:0 20px;
+}
+.feature{
+    background:#fff;
+    padding:25px;border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+.ads{
+    position:relative;z-index:2;
+    max-width:800px;margin:30px auto;
+    padding:30px;
+    text-align:center;
+    border-radius:18px;
+    background:#fff;
+}
+
+.cta{
+    text-align:center;
+    margin:40px 20px;
+}
+.cta a{
+    display:inline-block;
+    background:linear-gradient(90deg,#fb923c,#f97316);
+    color:#fff;
+    padding:18px 40px;
+    border-radius:999px;
+    font-size:22px;
+    text-decoration:none;
+}
+
+.floating{
+    position:fixed;
+    bottom:20px;right:20px;
+    background:#22c55e;
+    color:#fff;
+    padding:14px 18px;
+    border-radius:999px;
+    text-decoration:none;
+    z-index:5;
+}
+</style>
+
+<!-- Meta Pixel（雙 Pixel） -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1444042773424284');
+fbq('init', '1315057003852319');
+
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1444042773424284&ev=PageView&noscript=1"/>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1315057003852319&ev=PageView&noscript=1"/>
+</noscript>
+
+</head>
+
+<body>
+
+<div class="marquee">
+<span>🔥 全台持續撥款中</span>
+</div>
+
+<nav>
+    <div class="logo">全台互助會</div>
+    <a class="join-btn" href="https://line.me/ti/p/~@693shdql" target="_blank">加入我們</a>
+</nav>
+
+<section class="hero">
+    <h1>資金需求，一鍵快速解決</h1>
+    <p>全台互助會｜專業媒合｜安全可靠</p>
+</section>
+
+<div class="cta">
+    <a href="https://line.me/ti/p/~@693shdql" target="_blank">
+        👉 立即加入LINE諮詢
+    </a>
+</div>
+
+<a class="floating" href="https://line.me/ti/p/~@693shdql" target="_blank">
+    LINE立即諮詢
+</a>
+
+<footer style="text-align:center;padding:25px;font-size:13px;">
+© 2026 全台互助會
+</footer>
+
+<!-- 🔥 關鍵：全按鈕追蹤 -->
+<script>
+document.addEventListener('click', function(e){
+    let target = e.target.closest('a, button');
+
+    if(target && target.href && target.href.includes('line.me')){
+        e.preventDefault();
+
+        fbq('track','Lead');
+
+        setTimeout(()=>{
+            window.open(target.href,'_blank');
+        },300);
+    }
+});
+</script>
+
+</body>
+</html>
