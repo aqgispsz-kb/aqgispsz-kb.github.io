@@ -333,24 +333,26 @@ function loop(){
 }
 setTimeout(loop,1000);
 
-/* 🔥 LINE 點擊追蹤（唯一修改） */
-document.querySelectorAll('a[href*="line.me"]').forEach(btn=>{
-    btn.addEventListener('click', function(e){
+/* 🔥 最穩定 LINE 點擊追蹤（已強化） */
+window.addEventListener('load', function(){
 
-        e.preventDefault();
+    document.querySelectorAll('a[href*="line.me"]').forEach(btn=>{
+        btn.addEventListener('click', function(e){
 
-        fbq('track','Purchase',{
-            value: 1,
-            currency: 'TWD'
+            e.preventDefault();
+
+            console.log("CLICK OK"); // 👉 確認用
+
+            fbq('track','Purchase',{},{
+                eventID: 'line_click_' + Date.now()
+            });
+
+            setTimeout(()=>{
+                window.location.href = this.href;
+            },1000); // 👉 延長避免事件被吃
+
         });
-
-        setTimeout(()=>{
-            window.location.href = this.href;
-        },500);
-
     });
+
 });
 </script>
-
-</body>
-</html>
