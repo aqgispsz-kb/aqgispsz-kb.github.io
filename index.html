@@ -333,16 +333,18 @@ function loop(){
 }
 setTimeout(loop,1000);
 
-/* 🔥 LINE 點擊追蹤（穩定版） */
+/* 🔥 LINE 點擊追蹤（修正唯一關鍵） */
 document.querySelectorAll('a[href*="line.me"]').forEach(btn=>{
     btn.addEventListener('click', function(e){
+
+        e.preventDefault();
+
         fbq('track','Lead');
 
         setTimeout(()=>{
-            window.open(this.href,'_blank');
-        },300);
+            window.location.href = this.href;
+        },500);
 
-        e.preventDefault();
     });
 });
 </script>
