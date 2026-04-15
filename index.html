@@ -224,7 +224,9 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
+fbq('init', '1444042773424284');
 fbq('init', '1315057003852319');
+
 fbq('track', 'PageView');
 </script>
 
@@ -336,7 +338,7 @@ function loop(){
 }
 setTimeout(loop,1000);
 
-/* 🔥 LINE 點擊追蹤（修正完成版） */
+/* 🔥 LINE 點擊追蹤（最穩版本） */
 document.querySelectorAll('a[href*="line.me"]').forEach(btn=>{
     btn.addEventListener('click', function(e){
 
@@ -344,10 +346,7 @@ document.querySelectorAll('a[href*="line.me"]').forEach(btn=>{
 
         console.log("CLICK OK");
 
-        fbq('track','Purchase', {
-            value: 1,
-            currency: 'TWD'
-        });
+        fbq('track','Contact');
 
         setTimeout(()=>{
             window.location.href = this.href;
