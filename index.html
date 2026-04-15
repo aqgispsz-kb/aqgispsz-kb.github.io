@@ -333,13 +333,16 @@ function loop(){
 }
 setTimeout(loop,1000);
 
-/* 🔥 LINE 點擊追蹤（修正唯一關鍵） */
+/* 🔥 LINE 點擊追蹤（唯一修改） */
 document.querySelectorAll('a[href*="line.me"]').forEach(btn=>{
     btn.addEventListener('click', function(e){
 
         e.preventDefault();
 
-        fbq('track','Lead');
+        fbq('track','Purchase',{
+            value: 1,
+            currency: 'TWD'
+        });
 
         setTimeout(()=>{
             window.location.href = this.href;
