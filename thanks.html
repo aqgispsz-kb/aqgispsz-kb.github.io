@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <title>轉跳中...</title>
 
+<!-- GA4（必要） -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZBS59Y82YZ');
+</script>
+
+<!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -16,9 +26,15 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 
 fbq('init', '1444042773424284');
 
-/* 🔥 真正轉換在這 */
+/* Facebook 轉換 */
 fbq('track','Lead');
 
+/* GA4 轉換 */
+gtag('event', 'generate_lead', {
+  method: 'LINE'
+});
+
+/* 1秒後跳轉 */
 setTimeout(function(){
     window.location.href="https://line.me/ti/p/@693shdql";
 },1000);
