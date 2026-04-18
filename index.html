@@ -20,211 +20,37 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-
-body{
-    font-family:'Noto Sans TC',sans-serif;
-    background:linear-gradient(135deg,#fff7ed,#ffedd5);
-    color:#333;
-    overflow-x:hidden;
-}
-
-/* 背景光影 */
-body::after{
-    content:"";
-    position:fixed;
-    width:600px;height:600px;
-    background:radial-gradient(circle,rgba(251,146,60,0.25),transparent 70%);
-    top:-100px;right:-100px;
-    z-index:0;
-}
-
-body::before{
-    content:"✔ 已成功撥款 ✔ 安全保密 ✔ 快速核准";
-    position:fixed;
-    top:60%;left:15%;
-    transform:rotate(-20deg);
-    font-size:38px;
-    color:rgba(0,0,0,0.04);
-}
-
-/* 跑馬燈 */
-.marquee{
-    background:#111;
-    padding:12px 0;
-    overflow:hidden;
-    white-space:nowrap;
-}
-.marquee span{
-    display:inline-block;
-    font-size:20px;
-    font-weight:700;
-    padding-left:100%;
-    animation:marquee 12s linear infinite, glow 3s ease-in-out infinite;
-    background:linear-gradient(90deg,#ff7a18,#ffd200,#38bdf8,#ff7a18);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
-@keyframes marquee{
-    0%{transform:translateX(0);}
-    100%{transform:translateX(-100%);}
-}
-@keyframes glow{
-    0%,100%{filter:brightness(1);}
-    50%{filter:brightness(1.6);}
-}
-
-/* Navbar */
-nav{
-    position:relative;z-index:2;
-    max-width:850px;margin:auto;
-    padding:15px 20px;
-    display:flex;justify-content:space-between;
-}
-.logo{
-    font-size:24px;font-weight:900;
-    color:#ea580c;
-    text-shadow:0 0 12px rgba(251,146,60,0.4);
-}
-.join-btn{
-    background:linear-gradient(90deg,#fb923c,#f97316);
-    color:#fff;padding:10px 18px;
-    border-radius:999px;text-decoration:none;
-    font-weight:bold;
-}
-
-/* Hero */
-.hero{
-    position:relative;z-index:2;
-    text-align:center;
-    padding:60px 20px 30px;
-    max-width:850px;margin:auto;
-}
-.hero h1{
-    font-size:40px;font-weight:900;
-    color:#c2410c;
-    text-shadow:0 0 18px rgba(251,146,60,0.5);
-}
+body{font-family:'Noto Sans TC',sans-serif;background:linear-gradient(135deg,#fff7ed,#ffedd5);color:#333;overflow-x:hidden;}
+body::after{content:"";position:fixed;width:600px;height:600px;background:radial-gradient(circle,rgba(251,146,60,0.25),transparent 70%);top:-100px;right:-100px;z-index:0;}
+body::before{content:"✔ 已成功撥款 ✔ 安全保密 ✔ 快速核准";position:fixed;top:60%;left:15%;transform:rotate(-20deg);font-size:38px;color:rgba(0,0,0,0.04);}
+.marquee{background:#111;padding:12px 0;overflow:hidden;white-space:nowrap;}
+.marquee span{display:inline-block;font-size:20px;font-weight:700;padding-left:100%;animation:marquee 12s linear infinite, glow 3s ease-in-out infinite;background:linear-gradient(90deg,#ff7a18,#ffd200,#38bdf8,#ff7a18);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+@keyframes marquee{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
+@keyframes glow{0%,100%{filter:brightness(1);}50%{filter:brightness(1.6);}}
+nav{position:relative;z-index:2;max-width:850px;margin:auto;padding:15px 20px;display:flex;justify-content:space-between;}
+.logo{font-size:24px;font-weight:900;color:#ea580c;text-shadow:0 0 12px rgba(251,146,60,0.4);}
+.join-btn{background:linear-gradient(90deg,#fb923c,#f97316);color:#fff;padding:10px 18px;border-radius:999px;text-decoration:none;font-weight:bold;}
+.hero{position:relative;z-index:2;text-align:center;padding:60px 20px 30px;max-width:850px;margin:auto;}
+.hero h1{font-size:40px;font-weight:900;color:#c2410c;text-shadow:0 0 18px rgba(251,146,60,0.5);}
 .hero p{font-size:18px;opacity:.85;}
-
-/* Features */
-.features{
-    position:relative;z-index:2;
-    max-width:850px;margin:30px auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:18px;padding:0 20px;
-}
-.feature{
-    background:#fff;
-    padding:25px;border-radius:15px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.06);
-}
-.feature h3{
-    font-size:20px;margin-bottom:10px;
-    color:#ea580c;
-}
-
-/* 廣告框 */
-.ads{
-    position:relative;z-index:2;
-    max-width:800px;margin:30px auto;
-    padding:30px;
-    text-align:center;
-    border-radius:18px;
-    background:linear-gradient(135deg,rgba(255,255,255,0.9),rgba(255,237,213,0.9));
-    box-shadow:0 15px 40px rgba(249,115,22,0.15),
-               inset 0 0 20px rgba(255,255,255,0.6);
-    border:1px solid rgba(255,255,255,0.6);
-}
-.ads p{
-    font-size:22px;
-    margin:14px 0;
-    font-weight:700;
-    color:#9a3412;
-    text-shadow:0 0 12px rgba(251,146,60,0.35);
-}
-
-/* CTA */
-.cta{
-    text-align:center;
-    margin:40px 20px;
-    position:relative;z-index:2;
-}
-.cta a{
-    display:inline-block;
-    background:linear-gradient(90deg,#fb923c,#f97316);
-    color:#fff;
-    padding:18px 40px;
-    border-radius:999px;
-    font-size:22px;
-    text-decoration:none;
-    font-weight:bold;
-    box-shadow:0 12px 30px rgba(249,115,22,0.45);
-}
-
-/* 浮動按鈕 */
-.floating{
-    position:fixed;
-    bottom:20px;right:20px;
-    background:#22c55e;
-    color:#fff;
-    padding:14px 18px;
-    border-radius:999px;
-    text-decoration:none;
-    font-weight:bold;
-    z-index:5;
-}
-
-/* 🔥 彈出通知容器 */
-.popup-container{
-    position:fixed;
-    top:80px;
-    right:20px;
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    z-index:999;
-}
-.popup{
-    background:#fff;
-    padding:12px 16px;
-    border-radius:12px;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-    font-size:14px;
-    animation:fadeIn .4s ease;
-    position:relative;
-}
-.popup::after{
-    content:"✨";
-    position:absolute;
-    top:-5px;
-    right:-5px;
-    font-size:16px;
-    animation:twinkle 1s infinite alternate;
-}
-@keyframes fadeIn{
-    from{opacity:0;transform:translateY(-10px);}
-    to{opacity:1;transform:translateY(0);}
-}
-@keyframes twinkle{
-    from{opacity:0.3;transform:scale(0.8);}
-    to{opacity:1;transform:scale(1.2);}
-}
-.fade-out{
-    opacity:0;
-    transform:translateY(-10px);
-    transition:.4s;
-}
-
-/* 手機 */
-@media(max-width:600px){
-    .hero h1{font-size:28px;}
-    .ads p{font-size:18px;}
-}
+.features{position:relative;z-index:2;max-width:850px;margin:30px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;padding:0 20px;}
+.feature{background:#fff;padding:25px;border-radius:15px;text-align:center;box-shadow:0 10px 25px rgba(0,0,0,.06);}
+.feature h3{font-size:20px;margin-bottom:10px;color:#ea580c;}
+.ads{position:relative;z-index:2;max-width:800px;margin:30px auto;padding:30px;text-align:center;border-radius:18px;background:linear-gradient(135deg,rgba(255,255,255,0.9),rgba(255,237,213,0.9));box-shadow:0 15px 40px rgba(249,115,22,0.15),inset 0 0 20px rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.6);}
+.ads p{font-size:22px;margin:14px 0;font-weight:700;color:#9a3412;text-shadow:0 0 12px rgba(251,146,60,0.35);}
+.cta{text-align:center;margin:40px 20px;position:relative;z-index:2;}
+.cta a{display:inline-block;background:linear-gradient(90deg,#fb923c,#f97316);color:#fff;padding:18px 40px;border-radius:999px;font-size:22px;text-decoration:none;font-weight:bold;box-shadow:0 12px 30px rgba(249,115,22,0.45);}
+.floating{position:fixed;bottom:20px;right:20px;background:#22c55e;color:#fff;padding:14px 18px;border-radius:999px;text-decoration:none;font-weight:bold;z-index:5;}
+.popup-container{position:fixed;top:80px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:999;}
+.popup{background:#fff;padding:12px 16px;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,.15);font-size:14px;animation:fadeIn .4s ease;position:relative;}
+.popup::after{content:"✨";position:absolute;top:-5px;right:-5px;font-size:16px;animation:twinkle 1s infinite alternate;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(-10px);}to{opacity:1;transform:translateY(0);}}
+@keyframes twinkle{from{opacity:0.3;transform:scale(0.8);}to{opacity:1;transform:scale(1.2);}}
+.fade-out{opacity:0;transform:translateY(-10px);transition:.4s;}
+@media(max-width:600px){.hero h1{font-size:28px;}.ads p{font-size:18px;}}
 </style>
 
-<!-- Meta Pixel（雙 Pixel） -->
+<!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -235,29 +61,19 @@ t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '1444042773424284');
-fbq('init', '1315057003852319');
-
+fbq('init', '1444042773424284'); 
 fbq('track', 'PageView');
 </script>
 
 <noscript>
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1444042773424284&ev=PageView&noscript=1"/>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1315057003852319&ev=PageView&noscript=1"/>
-
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1444042773424284&ev=Purchase&noscript=1"/>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1315057003852319&ev=Purchase&noscript=1"/>
 </noscript>
 
 </head>
 
 <body>
 
-<!-- Google Tag Manager (noscript) -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-BFZSNNF6"
 height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -284,12 +100,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
         <h3>⚡ 快速撥款</h3>
         <p>最快當天審核，立即取得資金</p>
     </div>
-
     <div class="feature">
         <h3>✔ 審核簡單</h3>
         <p>流程簡單，不需繁瑣文件</p>
     </div>
-
     <div class="feature">
         <h3>🔒 資料隱密</h3>
         <p>嚴格保護個資，安心申請</p>
@@ -318,57 +132,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </footer>
 
 <script>
-const names=["林小姐","王先生","陳先生","李小姐","張先生","吳小姐","黃先生","蔡小姐","劉先生","楊小姐","周先生","許小姐","鄭先生","謝小姐","洪先生","郭先生","曾先生","彭小姐"];
-const amounts=[20000,30000,50000,60000,80000,100000,120000];
-const areas=["台北","台中","高雄"];
-const times=["剛剛","1分鐘前","2分鐘前","3分鐘前","5分鐘前"];
-
-function createPopup(){
-    const container=document.getElementById("popupContainer");
-    const name=names[Math.floor(Math.random()*names.length)];
-    const amount=amounts[Math.floor(Math.random()*amounts.length)];
-    const area=areas[Math.floor(Math.random()*areas.length)];
-    const time=times[Math.floor(Math.random()*times.length)];
-
-    const div=document.createElement("div");
-    div.className="popup";
-    div.innerText=`🔥 ${name} (${area}) ${time} 成功申請 ${amount.toLocaleString()} 元`;
-
-    container.appendChild(div);
-
-    if(container.children.length>6){
-        const first=container.children[0];
-        first.classList.add("fade-out");
-        setTimeout(()=>first.remove(),400);
-    }
-
-    const duration=3500+Math.random()*2500;
-    setTimeout(()=>{
-        div.classList.add("fade-out");
-        setTimeout(()=>div.remove(),400);
-    },duration);
-}
-
-function loop(){
-    createPopup();
-    setTimeout(loop,1500+Math.random()*2500);
-}
-setTimeout(loop,1000);
-
-/* 🔥 LINE 點擊追蹤（最穩版本） */
 document.querySelectorAll('a[href*="line.me"]').forEach(btn=>{
     btn.addEventListener('click', function(e){
-
         e.preventDefault();
-
-        console.log("CLICK OK");
-
-        fbq('track','Contact');
-
+        fbq('track','Lead');
         setTimeout(()=>{
             window.location.href = this.href;
-        },500);
-
+        },1000);
     });
 });
 </script>
