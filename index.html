@@ -135,10 +135,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 document.querySelectorAll('a[href*="line.me"]').forEach(btn=>{
     btn.addEventListener('click', function(e){
         e.preventDefault();
-        fbq('track','Lead');
-        setTimeout(()=>{
-            window.location.href = this.href;
-        },1000);
+
+        fbq('track', 'Purchase', {
+            value: 1,
+            currency: 'TWD'
+        });
+
+        window.open(this.href, '_blank');
     });
 });
 </script>
