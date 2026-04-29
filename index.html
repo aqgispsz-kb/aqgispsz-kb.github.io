@@ -5,8 +5,7 @@
     <!-- Google Tag Manager -->
     <script>
         (function(w,d,s,l,i){
-            w[l]=w[l]||[];
-            w[l].push({
+            w[l]=w[l]||[];w[l].push({
                 'gtm.start': new Date().getTime(),
                 event:'gtm.js'
             });
@@ -25,6 +24,35 @@
     <title>全台互助會 | 快速借款平台</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;900&display=swap" rel="stylesheet">
+
+    <!-- ✅ Meta Pixel（已修正） -->
+    <script>
+        !function(f,b,e,v,n,t,s){
+            if(f.fbq)return;
+            n=f.fbq=function(){
+                n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+            };
+            if(!f._fbq)f._fbq=n;
+            n.push=n;
+            n.loaded=!0;
+            n.version='2.0';
+            n.queue=[];
+            t=b.createElement(e);
+            t.async=!0;
+            t.src=v;
+            s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)
+        }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init','3990541387746171');
+        fbq('track','PageView');
+    </script>
+
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=3990541387746171&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel -->
 
     <style>
         *{
@@ -265,41 +293,11 @@
         }
     </style>
 
-    <!-- Meta Pixel -->
-    <script>
-        !function(f,b,e,v,n,t,s){
-            if(f.fbq)return;
-            n=f.fbq=function(){
-                n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
-            };
-            if(!f._fbq)f._fbq=n;
-            n.push=n;
-            n.loaded=!0;
-            n.version='2.0';
-            n.queue=[];
-            t=b.createElement(e);
-            t.async=!0;
-            t.src=v;
-            s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)
-        }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
-        fbq('init','1444042773424284');
-        fbq('init','3990541387746171');
-        fbq('track','PageView');
-    </script>
-
-    <noscript>
-        <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=1444042773424284&ev=PageView&noscript=1"/>
-        <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=3990541387746171&ev=PageView&noscript=1"/>
-    </noscript>
-
 </head>
 
 <body>
 
+    <!-- GTM noscript -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-BFZSNNF6"
         height="0" width="0"
@@ -356,15 +354,11 @@
         © 2026 全台互助會 ｜ 僅提供媒合服務
     </footer>
 
+    <!-- ✅ 修正後事件 -->
     <script>
         document.querySelectorAll('a[href*="line.me"]').forEach(btn=>{
-            btn.addEventListener('click',function(e){
-                e.preventDefault();
-                fbq('track','Purchase',{
-                    value:1,
-                    currency:'TWD'
-                });
-                window.open(this.href,'_blank');
+            btn.addEventListener('click',function(){
+                fbq('track','Lead');
             });
         });
     </script>
