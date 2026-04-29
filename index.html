@@ -25,7 +25,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;900&display=swap" rel="stylesheet">
 
-    <!-- ✅ Meta Pixel（只改ID） -->
+    <!-- ✅ 原本 Meta Pixel（不動） -->
     <script>
         !function(f,b,e,v,n,t,s){
             if(f.fbq)return;
@@ -52,6 +52,15 @@
         <img height="1" width="1" style="display:none"
         src="https://www.facebook.com/tr?id=1352370977069821&ev=PageView&noscript=1"/>
     </noscript>
+
+    <!-- ✅ 新增你給的 Meta Pixel（946） -->
+    <script>
+    fbq('init', '946697621595546');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=946697621595546&ev=PageView&noscript=1"
+    /></noscript>
     <!-- End Meta Pixel -->
 
     <style>
