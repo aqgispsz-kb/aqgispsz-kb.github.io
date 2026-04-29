@@ -2,139 +2,372 @@
 <html lang="zh-TW">
 <head>
 
-<!-- Google Tag Manager -->
-<script>
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id=GTM-BFZSNNF6'+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-BFZSNNF6');
-</script>
-<!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event:'gtm.js'
+            });
+            var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),
+                dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;
+            j.src='https://www.googletagmanager.com/gtm.js?id=GTM-BFZSNNF6'+dl;
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-BFZSNNF6');
+    </script>
+    <!-- End Google Tag Manager -->
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>全台互助會 | 快速借款平台</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全台互助會 | 快速借款平台</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;900&display=swap" rel="stylesheet">
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Noto Sans TC',sans-serif;background:linear-gradient(135deg,#fff7ed,#ffedd5);color:#333;overflow-x:hidden;}
-body::after{content:"";position:fixed;width:600px;height:600px;background:radial-gradient(circle,rgba(251,146,60,0.25),transparent 70%);top:-100px;right:-100px;z-index:0;}
-body::before{content:"✔ 已成功撥款 ✔ 安全保密 ✔ 快速核准";position:fixed;top:60%;left:15%;transform:rotate(-20deg);font-size:38px;color:rgba(0,0,0,0.04);}
-.marquee{background:#111;padding:12px 0;overflow:hidden;white-space:nowrap;}
-.marquee span{display:inline-block;font-size:20px;font-weight:700;padding-left:100%;animation:marquee 12s linear infinite, glow 3s ease-in-out infinite;background:linear-gradient(90deg,#ff7a18,#ffd200,#38bdf8,#ff7a18);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-@keyframes marquee{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
-@keyframes glow{0%,100%{filter:brightness(1);}50%{filter:brightness(1.6);}}
-nav{position:relative;z-index:2;max-width:850px;margin:auto;padding:15px 20px;display:flex;justify-content:space-between;}
-.logo{font-size:24px;font-weight:900;color:#ea580c;text-shadow:0 0 12px rgba(251,146,60,0.4);}
-.join-btn{background:linear-gradient(90deg,#fb923c,#f97316);color:#fff;padding:10px 18px;border-radius:999px;text-decoration:none;font-weight:bold;}
-.hero{position:relative;z-index:2;text-align:center;padding:60px 20px 30px;max-width:850px;margin:auto;}
-.hero h1{font-size:40px;font-weight:900;color:#c2410c;text-shadow:0 0 18px rgba(251,146,60,0.5);}
-.hero p{font-size:18px;opacity:.85;}
-.features{position:relative;z-index:2;max-width:850px;margin:30px auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;padding:0 20px;}
-.feature{background:#fff;padding:25px;border-radius:15px;text-align:center;box-shadow:0 10px 25px rgba(0,0,0,.06);}
-.feature h3{font-size:20px;margin-bottom:10px;color:#ea580c;}
-.ads{position:relative;z-index:2;max-width:800px;margin:30px auto;padding:30px;text-align:center;border-radius:18px;background:linear-gradient(135deg,rgba(255,255,255,0.9),rgba(255,237,213,0.9));box-shadow:0 15px 40px rgba(249,115,22,0.15),inset 0 0 20px rgba(255,255,255,0.6);border:1px solid rgba(255,255,255,0.6);}
-.ads p{font-size:22px;margin:14px 0;font-weight:700;color:#9a3412;text-shadow:0 0 12px rgba(251,146,60,0.35);}
-.cta{text-align:center;margin:40px 20px;position:relative;z-index:2;}
-.cta a{display:inline-block;background:linear-gradient(90deg,#fb923c,#f97316);color:#fff;padding:18px 40px;border-radius:999px;font-size:22px;text-decoration:none;font-weight:bold;box-shadow:0 12px 30px rgba(249,115,22,0.45);}
-.floating{position:fixed;bottom:20px;right:20px;background:#22c55e;color:#fff;padding:14px 18px;border-radius:999px;text-decoration:none;font-weight:bold;z-index:5;}
-.popup-container{position:fixed;top:80px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:999;}
-.popup{background:#fff;padding:12px 16px;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,.15);font-size:14px;animation:fadeIn .4s ease;position:relative;}
-.popup::after{content:"✨";position:absolute;top:-5px;right:-5px;font-size:16px;animation:twinkle 1s infinite alternate;}
-@keyframes fadeIn{from{opacity:0;transform:translateY(-10px);}to{opacity:1;transform:translateY(0);}}
-@keyframes twinkle{from{opacity:0.3;transform:scale(0.8);}to{opacity:1;transform:scale(1.2);}}
-.fade-out{opacity:0;transform:translateY(-10px);transition:.4s;}
-@media(max-width:600px){.hero h1{font-size:28px;}.ads p{font-size:18px;}}
-</style>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
 
-<!-- ✅ Meta Pixel（雙 Pixel 正確版） -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)}; 
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; 
-n.queue=[];t=b.createElement(e);t.async=!0; 
-t.src=v;s=b.getElementsByTagName(e)[0]; 
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+        body{
+            font-family:'Noto Sans TC',sans-serif;
+            background:linear-gradient(135deg,#fff7ed,#ffedd5);
+            color:#333;
+            overflow-x:hidden;
+        }
 
-fbq('init', '1444042773424284'); 
-fbq('init', '3990541387746171'); 
-fbq('track', 'PageView');
-</script>
+        body::after{
+            content:"";
+            position:fixed;
+            width:600px;
+            height:600px;
+            background:radial-gradient(circle,rgba(251,146,60,0.25),transparent 70%);
+            top:-100px;
+            right:-100px;
+            z-index:0;
+        }
 
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1444042773424284&ev=PageView&noscript=1"/>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=3990541387746171&ev=PageView&noscript=1"/>
-</noscript>
+        body::before{
+            content:"✔ 已成功撥款 ✔ 安全保密 ✔ 快速核准";
+            position:fixed;
+            top:60%;
+            left:15%;
+            transform:rotate(-20deg);
+            font-size:38px;
+            color:rgba(0,0,0,0.04);
+        }
+
+        .marquee{
+            background:#111;
+            padding:12px 0;
+            overflow:hidden;
+            white-space:nowrap;
+        }
+
+        .marquee span{
+            display:inline-block;
+            font-size:20px;
+            font-weight:700;
+            padding-left:100%;
+            animation:marquee 12s linear infinite, glow 3s ease-in-out infinite;
+            background:linear-gradient(90deg,#ff7a18,#ffd200,#38bdf8,#ff7a18);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+        }
+
+        @keyframes marquee{
+            0%{transform:translateX(0);}
+            100%{transform:translateX(-100%);}
+        }
+
+        @keyframes glow{
+            0%,100%{filter:brightness(1);}
+            50%{filter:brightness(1.6);}
+        }
+
+        nav{
+            position:relative;
+            z-index:2;
+            max-width:850px;
+            margin:auto;
+            padding:15px 20px;
+            display:flex;
+            justify-content:space-between;
+        }
+
+        .logo{
+            font-size:24px;
+            font-weight:900;
+            color:#ea580c;
+            text-shadow:0 0 12px rgba(251,146,60,0.4);
+        }
+
+        .join-btn{
+            background:linear-gradient(90deg,#fb923c,#f97316);
+            color:#fff;
+            padding:10px 18px;
+            border-radius:999px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .hero{
+            position:relative;
+            z-index:2;
+            text-align:center;
+            padding:60px 20px 30px;
+            max-width:850px;
+            margin:auto;
+        }
+
+        .hero h1{
+            font-size:40px;
+            font-weight:900;
+            color:#c2410c;
+            text-shadow:0 0 18px rgba(251,146,60,0.5);
+        }
+
+        .hero p{
+            font-size:18px;
+            opacity:.85;
+        }
+
+        .features{
+            position:relative;
+            z-index:2;
+            max-width:850px;
+            margin:30px auto;
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:18px;
+            padding:0 20px;
+        }
+
+        .feature{
+            background:#fff;
+            padding:25px;
+            border-radius:15px;
+            text-align:center;
+            box-shadow:0 10px 25px rgba(0,0,0,.06);
+        }
+
+        .feature h3{
+            font-size:20px;
+            margin-bottom:10px;
+            color:#ea580c;
+        }
+
+        .ads{
+            position:relative;
+            z-index:2;
+            max-width:800px;
+            margin:30px auto;
+            padding:30px;
+            text-align:center;
+            border-radius:18px;
+            background:linear-gradient(135deg,rgba(255,255,255,0.9),rgba(255,237,213,0.9));
+            box-shadow:0 15px 40px rgba(249,115,22,0.15), inset 0 0 20px rgba(255,255,255,0.6);
+            border:1px solid rgba(255,255,255,0.6);
+        }
+
+        .ads p{
+            font-size:22px;
+            margin:14px 0;
+            font-weight:700;
+            color:#9a3412;
+            text-shadow:0 0 12px rgba(251,146,60,0.35);
+        }
+
+        .cta{
+            text-align:center;
+            margin:40px 20px;
+            position:relative;
+            z-index:2;
+        }
+
+        .cta a{
+            display:inline-block;
+            background:linear-gradient(90deg,#fb923c,#f97316);
+            color:#fff;
+            padding:18px 40px;
+            border-radius:999px;
+            font-size:22px;
+            text-decoration:none;
+            font-weight:bold;
+            box-shadow:0 12px 30px rgba(249,115,22,0.45);
+        }
+
+        .floating{
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            background:#22c55e;
+            color:#fff;
+            padding:14px 18px;
+            border-radius:999px;
+            text-decoration:none;
+            font-weight:bold;
+            z-index:5;
+        }
+
+        .popup-container{
+            position:fixed;
+            top:80px;
+            right:20px;
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+            z-index:999;
+        }
+
+        .popup{
+            background:#fff;
+            padding:12px 16px;
+            border-radius:12px;
+            box-shadow:0 10px 25px rgba(0,0,0,.15);
+            font-size:14px;
+            animation:fadeIn .4s ease;
+            position:relative;
+        }
+
+        .popup::after{
+            content:"✨";
+            position:absolute;
+            top:-5px;
+            right:-5px;
+            font-size:16px;
+            animation:twinkle 1s infinite alternate;
+        }
+
+        @keyframes fadeIn{
+            from{opacity:0;transform:translateY(-10px);}
+            to{opacity:1;transform:translateY(0);}
+        }
+
+        @keyframes twinkle{
+            from{opacity:0.3;transform:scale(0.8);}
+            to{opacity:1;transform:scale(1.2);}
+        }
+
+        .fade-out{
+            opacity:0;
+            transform:translateY(-10px);
+            transition:.4s;
+        }
+
+        @media(max-width:600px){
+            .hero h1{font-size:28px;}
+            .ads p{font-size:18px;}
+        }
+    </style>
+
+    <!-- Meta Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s){
+            if(f.fbq)return;
+            n=f.fbq=function(){
+                n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+            };
+            if(!f._fbq)f._fbq=n;
+            n.push=n;
+            n.loaded=!0;
+            n.version='2.0';
+            n.queue=[];
+            t=b.createElement(e);
+            t.async=!0;
+            t.src=v;
+            s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)
+        }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init','1444042773424284');
+        fbq('init','3990541387746171');
+        fbq('track','PageView');
+    </script>
+
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1444042773424284&ev=PageView&noscript=1"/>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=3990541387746171&ev=PageView&noscript=1"/>
+    </noscript>
 
 </head>
 
 <body>
 
-<noscript>
-<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-BFZSNNF6"
-height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-BFZSNNF6"
+        height="0" width="0"
+        style="display:none;visibility:hidden"></iframe>
+    </noscript>
 
-<!-- 下面內容完全照舊 -->
-
-<div class="marquee">
-<span>🔥 王先生 已成功借款 5萬元 ｜ 李小姐 已核准 8萬元 ｜ 陳先生 10分鐘完成申請 ｜ 全台持續撥款中</span>
-</div>
-
-<div id="popupContainer" class="popup-container"></div>
-
-<nav>
-    <div class="logo">全台互助會</div>
-    <a class="join-btn" href="https://line.me/ti/p/@693shdql" target="_blank">加入我們</a>
-</nav>
-
-<section class="hero">
-    <h1>資金需求，一鍵快速解決</h1>
-    <p>全台互助會｜專業媒合｜安全可靠</p>
-</section>
-
-<section class="features">
-    <div class="feature">
-        <h3>⚡ 快速撥款</h3>
-        <p>最快當天審核，立即取得資金</p>
+    <div class="marquee">
+        <span>🔥 王先生 已成功借款 5萬元 ｜ 李小姐 已核准 8萬元 ｜ 陳先生 10分鐘完成申請 ｜ 全台持續撥款中</span>
     </div>
-    <div class="feature">
-        <h3>✔ 審核簡單</h3>
-        <p>流程簡單，不需繁瑣文件</p>
+
+    <div id="popupContainer" class="popup-container"></div>
+
+    <nav>
+        <div class="logo">全台互助會</div>
+        <a class="join-btn" href="https://line.me/ti/p/@693shdql" target="_blank">加入我們</a>
+    </nav>
+
+    <section class="hero">
+        <h1>資金需求，一鍵快速解決</h1>
+        <p>全台互助會｜專業媒合｜安全可靠</p>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h3>⚡ 快速撥款</h3>
+            <p>最快當天審核，立即取得資金</p>
+        </div>
+
+        <div class="feature">
+            <h3>✔ 審核簡單</h3>
+            <p>流程簡單，不需繁瑣文件</p>
+        </div>
+
+        <div class="feature">
+            <h3>🔒 資料隱密</h3>
+            <p>嚴格保護個資，安心申請</p>
+        </div>
+    </section>
+
+    <div class="ads">
+        <p>✔ 全台服務｜快速回應</p>
+        <p>✔ 彈性方案｜輕鬆借款</p>
+        <p>✔ 專人協助｜安心可靠</p>
+        <p>✔ 已協助多位用戶成功取得資金</p>
     </div>
-    <div class="feature">
-        <h3>🔒 資料隱密</h3>
-        <p>嚴格保護個資，安心申請</p>
+
+    <div class="cta">
+        <a href="https://line.me/ti/p/@693shdql" target="_blank">👉 立即加入LINE諮詢</a>
     </div>
-</section>
 
-<div class="cta">
-    <a href="https://line.me/ti/p/@693shdql" target="_blank">
-        👉 立即加入LINE諮詢
-    </a>
-</div>
+    <a class="floating" href="https://line.me/ti/p/@693shdql" target="_blank">LINE立即諮詢</a>
 
-<script>
-document.querySelectorAll('a[href*="line.me"]').forEach(btn=>{
-    btn.addEventListener('click', function(e){
-        e.preventDefault();
+    <footer style="text-align:center;padding:25px;font-size:13px;opacity:0.6;">
+        © 2026 全台互助會 ｜ 僅提供媒合服務
+    </footer>
 
-        fbq('track', 'Purchase', {
-            value: 1,
-            currency: 'TWD'
+    <script>
+        document.querySelectorAll('a[href*="line.me"]').forEach(btn=>{
+            btn.addEventListener('click',function(e){
+                e.preventDefault();
+                fbq('track','Purchase',{
+                    value:1,
+                    currency:'TWD'
+                });
+                window.open(this.href,'_blank');
+            });
         });
-
-        window.open(this.href, '_blank');
-    });
-});
-</script>
+    </script>
 
 </body>
 </html>
