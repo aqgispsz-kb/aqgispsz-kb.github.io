@@ -25,41 +25,22 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;900&display=swap" rel="stylesheet">
 
-    <!-- ✅ 原本 Meta Pixel（不動） -->
+    <!-- ✅ 已替換為新的 Meta Pixel -->
     <script>
-        !function(f,b,e,v,n,t,s){
-            if(f.fbq)return;
-            n=f.fbq=function(){
-                n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
-            };
-            if(!f._fbq)f._fbq=n;
-            n.push=n;
-            n.loaded=!0;
-            n.version='2.0';
-            n.queue=[];
-            t=b.createElement(e);
-            t.async=!0;
-            t.src=v;
-            s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)
-        }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
-        fbq('init','1352370977069821');
-        fbq('track','PageView');
-    </script>
-
-    <noscript>
-        <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=1352370977069821&ev=PageView&noscript=1"/>
-    </noscript>
-
-    <!-- ✅ 新增你給的 Meta Pixel（946） -->
-    <script>
-    fbq('init', '946697621595546');
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1734484771255281');
     fbq('track', 'PageView');
     </script>
+
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=946697621595546&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=1734484771255281&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel -->
 
@@ -363,7 +344,6 @@
         © 2026 全台互助會 ｜ 僅提供媒合服務
     </footer>
 
-    <!-- ✅ 修正後事件 -->
     <script>
         document.querySelectorAll('a[href*="line.me"]').forEach(btn=>{
             btn.addEventListener('click',function(){
