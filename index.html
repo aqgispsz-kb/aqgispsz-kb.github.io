@@ -25,7 +25,6 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;900&display=swap" rel="stylesheet">
 
-    <!-- ✅ 已替換為新的 Meta Pixel -->
     <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -46,11 +45,7 @@
     <!-- End Meta Pixel -->
 
     <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+        *{margin:0;padding:0;box-sizing:border-box;}
 
         body{
             font-family:'Noto Sans TC',sans-serif;
@@ -122,7 +117,6 @@
             font-size:24px;
             font-weight:900;
             color:#ea580c;
-            text-shadow:0 0 12px rgba(251,146,60,0.4);
         }
 
         .join-btn{
@@ -139,25 +133,17 @@
             z-index:2;
             text-align:center;
             padding:60px 20px 30px;
-            max-width:850px;
-            margin:auto;
         }
 
         .hero h1{
             font-size:40px;
             font-weight:900;
             color:#c2410c;
-            text-shadow:0 0 18px rgba(251,146,60,0.5);
         }
 
-        .hero p{
-            font-size:18px;
-            opacity:.85;
-        }
+        .hero p{font-size:18px;}
 
         .features{
-            position:relative;
-            z-index:2;
             max-width:850px;
             margin:30px auto;
             display:grid;
@@ -171,41 +157,18 @@
             padding:25px;
             border-radius:15px;
             text-align:center;
-            box-shadow:0 10px 25px rgba(0,0,0,.06);
-        }
-
-        .feature h3{
-            font-size:20px;
-            margin-bottom:10px;
-            color:#ea580c;
         }
 
         .ads{
-            position:relative;
-            z-index:2;
             max-width:800px;
             margin:30px auto;
             padding:30px;
             text-align:center;
-            border-radius:18px;
-            background:linear-gradient(135deg,rgba(255,255,255,0.9),rgba(255,237,213,0.9));
-            box-shadow:0 15px 40px rgba(249,115,22,0.15), inset 0 0 20px rgba(255,255,255,0.6);
-            border:1px solid rgba(255,255,255,0.6);
-        }
-
-        .ads p{
-            font-size:22px;
-            margin:14px 0;
-            font-weight:700;
-            color:#9a3412;
-            text-shadow:0 0 12px rgba(251,146,60,0.35);
         }
 
         .cta{
             text-align:center;
             margin:40px 20px;
-            position:relative;
-            z-index:2;
         }
 
         .cta a{
@@ -216,8 +179,6 @@
             border-radius:999px;
             font-size:22px;
             text-decoration:none;
-            font-weight:bold;
-            box-shadow:0 12px 30px rgba(249,115,22,0.45);
         }
 
         .floating{
@@ -229,58 +190,6 @@
             padding:14px 18px;
             border-radius:999px;
             text-decoration:none;
-            font-weight:bold;
-            z-index:5;
-        }
-
-        .popup-container{
-            position:fixed;
-            top:80px;
-            right:20px;
-            display:flex;
-            flex-direction:column;
-            gap:10px;
-            z-index:999;
-        }
-
-        .popup{
-            background:#fff;
-            padding:12px 16px;
-            border-radius:12px;
-            box-shadow:0 10px 25px rgba(0,0,0,.15);
-            font-size:14px;
-            animation:fadeIn .4s ease;
-            position:relative;
-        }
-
-        .popup::after{
-            content:"✨";
-            position:absolute;
-            top:-5px;
-            right:-5px;
-            font-size:16px;
-            animation:twinkle 1s infinite alternate;
-        }
-
-        @keyframes fadeIn{
-            from{opacity:0;transform:translateY(-10px);}
-            to{opacity:1;transform:translateY(0);}
-        }
-
-        @keyframes twinkle{
-            from{opacity:0.3;transform:scale(0.8);}
-            to{opacity:1;transform:scale(1.2);}
-        }
-
-        .fade-out{
-            opacity:0;
-            transform:translateY(-10px);
-            transition:.4s;
-        }
-
-        @media(max-width:600px){
-            .hero h1{font-size:28px;}
-            .ads p{font-size:18px;}
         }
     </style>
 
@@ -288,7 +197,6 @@
 
 <body>
 
-    <!-- GTM noscript -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-BFZSNNF6"
         height="0" width="0"
@@ -298,8 +206,6 @@
     <div class="marquee">
         <span>🔥 王先生 已成功借款 5萬元 ｜ 李小姐 已核准 8萬元 ｜ 陳先生 10分鐘完成申請 ｜ 全台持續撥款中</span>
     </div>
-
-    <div id="popupContainer" class="popup-container"></div>
 
     <nav>
         <div class="logo">全台互助會</div>
@@ -312,27 +218,14 @@
     </section>
 
     <section class="features">
-        <div class="feature">
-            <h3>⚡ 快速撥款</h3>
-            <p>最快當天審核，立即取得資金</p>
-        </div>
-
-        <div class="feature">
-            <h3>✔ 審核簡單</h3>
-            <p>流程簡單，不需繁瑣文件</p>
-        </div>
-
-        <div class="feature">
-            <h3>🔒 資料隱密</h3>
-            <p>嚴格保護個資，安心申請</p>
-        </div>
+        <div class="feature"><h3>⚡ 快速撥款</h3></div>
+        <div class="feature"><h3>✔ 審核簡單</h3></div>
+        <div class="feature"><h3>🔒 資料隱密</h3></div>
     </section>
 
     <div class="ads">
         <p>✔ 全台服務｜快速回應</p>
         <p>✔ 彈性方案｜輕鬆借款</p>
-        <p>✔ 專人協助｜安心可靠</p>
-        <p>✔ 已協助多位用戶成功取得資金</p>
     </div>
 
     <div class="cta">
@@ -342,13 +235,19 @@
     <a class="floating" href="https://line.me/ti/p/@693shdql" target="_blank">LINE立即諮詢</a>
 
     <footer style="text-align:center;padding:25px;font-size:13px;opacity:0.6;">
-        © 2026 全台互助會 ｜ 僅提供媒合服務
+        © 2026 全台互助會
     </footer>
 
+    <!-- ✅ 修正後：只會送一次 Purchase -->
     <script>
+        let tracked = false;
+
         document.querySelectorAll('a[href*="line.me"]').forEach(btn=>{
             btn.addEventListener('click',function(){
-                fbq('track','Lead');
+                if(tracked) return;
+                tracked = true;
+
+                fbq('track','Purchase');
             });
         });
     </script>
